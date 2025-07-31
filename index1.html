@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wskazówka</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Georgia', serif;
+      background-image: url('11.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #ff2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 1rem;
+      max-width: 90vw;
+      box-sizing: border-box;
+      transition: opacity 1s ease;
+    }
+
+    h1 {
+      font-size: 6vw;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content" id="number">
+    <h1>8</h1>
+  </div>
+
+  <div class="content" id="poem" style="display:none">
+    <h1 style="font-size: 4vw;">
+      W pokoju duszno, choć lato w rozkwicie,<br>
+      Szukaj tam, gdzie chłód kryje życie.<br>
+      Wysoko patrz, nie w glebę, nie w ściany,<br>
+      Tam, gdzie powiew cichy bywa nad ranem.<br><br>
+      Nie otwieraj drzwi – to nie ta droga,<br>
+      Klucz ci przyniesie maszyna chłodna.<br><br>
+      Choć metal zimny, to trop jest gorący –<br>
+      Poszukaj wskazówki pod lodowym strąkiem.<br><br>
+      Gdy wzrok uniesiesz, tam prawda się chłodzi,<br>
+      Na skrzydłach powietrza sekrety się rodzi.
+    </h1>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('number').style.display = 'none';
+      document.getElementById('poem').style.display = 'block';
+    }, 5000);
+  </script>
+</body>
+</html>
